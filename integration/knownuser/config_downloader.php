@@ -1,6 +1,6 @@
 <?php
-# CLI ONLY
-//(PHP_SAPI !== 'cli' || isset($_SERVER['HTTP_USER_AGENT'])) && die('cli only');
+# CLI ONLY - enable this to disable non cli calls to this file
+(PHP_SAPI !== 'cli' || isset($_SERVER['HTTP_USER_AGENT'])) && die('cli only');
 
 /**
  * 1) put this into crontab (every 5 minutes)
@@ -82,8 +82,8 @@ print("Got configuration for "
 
 // Do something intelligent with the configuration...
 if (@file_put_contents($qit_config["integrationConfigPath"], $cfg_str)) {
-    print("OK.");
+    print("OK.\n");
 } else {
-    print("ERROR!");
+    print("ERROR!\n");
 }
 
