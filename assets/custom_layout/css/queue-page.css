@@ -1,0 +1,14 @@
+#header {
+    background: chartreuse;
+}
+
+#MainPart_divProgressbar .progress {
+    width: 200%;
+}
+
+/*
+Whitelabel hack
+*/
+#whatisthis, #footer-queueit-link {
+    display: none;
+}
