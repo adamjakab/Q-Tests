@@ -1,15 +1,16 @@
 <?php
 /**
  * Secret values from GO Platform
+ * Never commit this file to any repository
  */
 $qit_config = [
     /**
-     * Your account name
+     * Your GO account name
      */
     "customerID" => "",
 
     /**
-     * The secret key of your account will be used to hash the queue token
+     * The secret key of your GO account will be used to hash the queue token
      */
     "secretKey" => "",
 
