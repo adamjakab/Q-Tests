@@ -15,6 +15,11 @@ header('custom-header-2: How are you doing?');
 <body>
 <h1>CF</h1>
 <p>HI!</p>
+
+<p>
+    For this to work you need to setup a CF worker and push the
+    configuration to a protected route souch as 'https://qtest.jakab.pro/integration/cloudflare/?__push_queueit_config'
+</p>
 <a href="/">
     <button name="Back">Back</button>
 </a>
