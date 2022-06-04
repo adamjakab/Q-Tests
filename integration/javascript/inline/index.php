@@ -3,8 +3,8 @@
 /** @var $qit_config [] */
 require_once(__DIR__ . '/../../../config.php');
 
-$qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.js');
-$qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.js');
+$qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.min.js');
+$qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.min.js');
 
 
 ?>
@@ -24,10 +24,16 @@ $qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.j
     <script type="text/javascript">
     	window.queueit_clientside_config={
     		"customerId":"adjatest",
-    		"integrations":[{"name":"JS-Q","actionType":"Queue","eventId":"qtestjprov2","cookieDomain":"","isCookieSecure":false,"queueDomain":"adjatest.queue-it.net","forcedTargetUrl":"","culture":"","extendValidity":true,"validity":3,"redirectLogic":"AllowTParameter","triggers":[{"triggerParts":[{"operator":"Equals","valueToCompare":"qtest.jakab.pro","urlPart":"HostName","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true},{"operator":"Contains","valueToCompare":"/integration/javascript/","urlPart":"PagePath","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true}],"logicalOperator":"And"}],"onVerified":"","onDisabled":"","onTimeout":"","removeTokenFromUrl":true,"queryStringPrefix":"qit"}]
+    		"integrations":[
+    		{"name":"JS-Q","actionType":"Queue","eventId":"qtestjprov2","cookieDomain":"","isCookieSecure":false,"queueDomain":"adjatest.queue-it.net","forcedTargetUrl":"","culture":"","extendValidity":true,"validity":3,"redirectLogic":"AllowTParameter",
+    		"triggers":[{"triggerParts":[
+    		{"operator":"Equals","valueToCompare":"qtest.jakab.pro","urlPart":"HostName","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true},
+    		{"operator":"Contains","valueToCompare":"/integration/javascriptx/","urlPart":"PagePath","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true}]
+    		,"logicalOperator":"And"}],"onVerified":"","onDisabled":"","onTimeout":"","removeTokenFromUrl":true,"queryStringPrefix":"qit"}]
     	};
     	QueueIt.Javascript.PageEventIntegration.initQueueClient(window.queueit_clientside_config);
     </script>
+    <!-- Queue-it Javascript inline code -->
     
 </head>
 <body>
@@ -36,5 +42,6 @@ $qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.j
 <a href="/">
     <button name="Back">Back</button>
 </a>
+
 </body>
 </html>
