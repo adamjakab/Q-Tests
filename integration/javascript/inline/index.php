@@ -4,7 +4,7 @@
 require_once(__DIR__ . '/../../../config.php');
 
 $qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.min.js');
-$qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queuequeueconfigloader.min.js');
+$qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.min.js');
 
 
 
