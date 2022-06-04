@@ -2,6 +2,11 @@
 # Local Secrets (rename (config.tpl.php -> config.php) and edit with your own values
 /** @var $qit_config [] */
 require_once(__DIR__ . '/../../../config.php');
+
+$qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.min.js');
+
+
+
 ?>
 <html lang="en">
 <head>
@@ -12,14 +17,10 @@ require_once(__DIR__ . '/../../../config.php');
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/style.css">
     
-    <!-- Queue-it Javascript connector code
-    <script type='text/javascript' src='//static.queue-it.net/script/queueclient.min.js'></script>
-    <script
-            data-queueit-c='<?php echo $qit_config["customerID"]; ?>'
-            type='text/javascript'
-            src='//static.queue-it.net/script/queueconfigloader.min.js'>
+    <!-- Queue-it Javascript inline code -->
+    <script type='text/javascript'>
+    	<?php echo $qit_queueclient_js; ?>
     </script>
-    -->
     
 </head>
 <body>
