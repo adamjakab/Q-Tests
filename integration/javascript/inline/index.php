@@ -20,7 +20,6 @@ $qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.m
     <!-- Queue-it Javascript inline code -->
     <script type='text/javascript'><?php echo $qit_queueclient_js; ?></script>
     <script type='text/javascript' data-queueit-c='<?php echo $qit_config["customerID"]; ?>' data-queueit-noautorun="true" ><?php echo $qit_queueconfigloader_js; ?></script>
-    
     <script type="text/javascript">
     	window.queueit_clientside_config={
     		"customerId":"adjatest",
