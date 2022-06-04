@@ -15,8 +15,8 @@
 <ul>
     <li><a href="integration/knownuser/">ku</a></li>
     <li><a href="integration/cloudflare/">cf</a></li>
-    <li><a href="integration/javascript/default">js(default)</a></li>
-    <li><a href="integration/javascript/inline">js(inline)</a></li>
+    <li><a href="integration/javascript/default/">js(default)</a></li>
+    <li><a href="integration/javascript/inline/">js(inline)</a></li>
 </ul>
 </body>
 </html>
