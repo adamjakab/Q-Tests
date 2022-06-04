@@ -11,18 +11,22 @@ require_once(__DIR__ . '/../../config.php');
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Queue-it Javascript connector code -->
     <script type='text/javascript' src='//static.queue-it.net/script/queueclient.min.js'></script>
     <script
             data-queueit-c='<?php echo $qit_config["customerID"]; ?>'
             type='text/javascript'
             src='//static.queue-it.net/script/queueconfigloader.min.js'>
     </script>
+    <!-- Queue-it Javascript connector code -->
+    
 </head>
 <body>
 <h1>JS</h1>
 <p>HI!</p>
 <a href="/">
-    <button name="Back">Back</button>
+    <button name="Back">Backx</button>
 </a>
 </body>
 </html>
