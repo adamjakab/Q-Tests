@@ -26,7 +26,7 @@ require_once(__DIR__ . '/../../config.php');
 <h1>JS</h1>
 <p>HI!</p>
 <a href="/">
-    <button name="Back">Backx</button>
+    <button name="Back">Back</button>
 </a>
 </body>
 </html>
