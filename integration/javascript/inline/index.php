@@ -18,8 +18,14 @@ $qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.min.js');
     <link rel="stylesheet" href="/assets/css/style.css">
     
     <!-- Queue-it Javascript inline code -->
-    <script type='text/javascript'>
-    	<?php echo $qit_queueclient_js; ?>
+    <script type='text/javascript'><?php echo $qit_queueclient_js; ?></script>
+    
+    <script type="text/javascript">
+    	window.queueit_clientside_config={
+    		"customerId":"adjatest",
+    		"integrations":[{"name":"JS-Q","actionType":"Queue","eventId":"qtestjprov2","cookieDomain":"","isCookieSecure":false,"queueDomain":"adjatest.queue-it.net","forcedTargetUrl":"","culture":"","extendValidity":true,"validity":3,"redirectLogic":"AllowTParameter","triggers":[{"triggerParts":[{"operator":"Equals","valueToCompare":"qtest.jakab.pro","urlPart":"HostName","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true},{"operator":"Contains","valueToCompare":"/integration/javascript/","urlPart":"PagePath","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true}],"logicalOperator":"And"}],"onVerified":"","onDisabled":"","onTimeout":"","removeTokenFromUrl":true,"queryStringPrefix":"qit"}]
+    	};
+    	QueueIt.Javascript.PageEventIntegration.initQueueClient(window.queueit_clientside_config);
     </script>
     
 </head>
