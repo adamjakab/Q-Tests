@@ -22,7 +22,6 @@ require_once(__DIR__ . '/../../../config.php');
             src="../_connector/queueconfigloader_mod1.js">
     </script>
     <!-- Queue-it Javascript connector code -->
-    
 </head>
 <body>
 <h1>JS - Default integration method</h1>
