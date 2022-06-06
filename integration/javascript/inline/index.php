@@ -3,9 +3,8 @@
 /** @var $qit_config [] */
 require_once(__DIR__ . '/../../../config.php');
 
-$qit_queueclient_js = file_get_contents(__DIR__ . '/js/queueclient.min.js');
-$qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.min.js');
-
+$qit_queueclient_js = file_get_contents(dirname(__DIR__) . '/_connector/queueclient.min.js');
+$qit_queueconfigloader_js = file_get_contents(dirname(__DIR__) . '/_connector/queueconfigloader.min.js');
 
 ?>
 <html lang="en">
@@ -27,19 +26,19 @@ $qit_queueconfigloader_js = file_get_contents(__DIR__ . '/js/queueconfigloader.m
 
 
 <!-- Queue-it Javascript inline code -->
-<script type='text/javascript'><?php echo $qit_queueclient_js; ?></script>
-<script type='text/javascript' data-queueit-c='<?php echo $qit_config["customerID"]; ?>' data-queueit-noautorun="true" ><?php echo $qit_queueconfigloader_js; ?></script>
+<script type="text/javascript"><?php echo $qit_queueclient_js; ?></script>
+<script type="text/javascript" data-queueit-c='<?php echo $qit_config["customerID"]; ?>' data-queueit-noautorun="true" ><?php echo $qit_queueconfigloader_js; ?></script>
 <script type="text/javascript">
-	window.queueit_clientside_config={
-		"customerId":"adjatest",
-		"integrations":[
-		{"name":"JS-Q","actionType":"Queue","eventId":"qtestjprov2","cookieDomain":"","isCookieSecure":false,"queueDomain":"adjatest.queue-it.net","forcedTargetUrl":"","culture":"","extendValidity":true,"validity":3,"redirectLogic":"AllowTParameter",
-		"triggers":[{"triggerParts":[
-		{"operator":"Equals","valueToCompare":"qtest.jakab.pro","urlPart":"HostName","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true},
-		{"operator":"Contains","valueToCompare":"/integration/javascript/inline/","urlPart":"PagePath","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true}]
-		,"logicalOperator":"And"}],"onVerified":"","onDisabled":"","onTimeout":"","removeTokenFromUrl":true,"queryStringPrefix":"qit"}]
-	};
-	QueueIt.Javascript.PageEventIntegration.initQueueClient(window.queueit_clientside_config);
+window.queueit_clientside_config={
+	"customerId":"adjatest",
+	"integrations":[
+	{"name":"JS-Q","actionType":"Queue","eventId":"qtestjprov2","cookieDomain":"","isCookieSecure":false,"queueDomain":"adjatest.queue-it.net","forcedTargetUrl":"","culture":"","extendValidity":true,"validity":3,"redirectLogic":"AllowTParameter",
+	"triggers":[{"triggerParts":[
+	{"operator":"Equals","valueToCompare":"qtest.jakab.pro","urlPart":"HostName","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true},
+	{"operator":"Contains","valueToCompare":"/integration/javascript/inline/","urlPart":"PagePath","validatorType":"UrlValidator","isNegative":false,"isIgnoreCase":true}]
+	,"logicalOperator":"And"}],"onVerified":"","onDisabled":"","onTimeout":"","removeTokenFromUrl":true,"queryStringPrefix":"qit"}]
+};
+QueueIt.Javascript.PageEventIntegration.initQueueClient(window.queueit_clientside_config);
 </script>
 <!-- Queue-it Javascript inline code -->
 
