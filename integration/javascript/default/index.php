@@ -15,11 +15,11 @@ require_once(__DIR__ . '/../../../config.php');
     <link rel="stylesheet" href="/assets/css/style.css">
     
     <!-- Queue-it Javascript connector code -->
-    <script type='text/javascript' src='../_connector/queueclient.js'></script>
+    <script type="text/javascript" src="../_connector/queueclient_mod1.js"></script>
     <script
             data-queueit-c='<?php echo $qit_config["customerID"]; ?>'
-            type='text/javascript'
-            src='../_connector/queueconfigloader.min.js'>
+            type="text/javascript"
+            src="../_connector/queueconfigloader_mod1.js">
     </script>
     <!-- Queue-it Javascript connector code -->
     
