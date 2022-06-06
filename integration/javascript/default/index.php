@@ -18,6 +18,7 @@ require_once(__DIR__ . '/../../../config.php');
     <script type="text/javascript" src="../_connector/queueclient_mod1.js"></script>
     <script
             data-queueit-c='<?php echo $qit_config["customerID"]; ?>'
+            data-queueit-host="palont.org"
             type="text/javascript"
             src="../_connector/queueconfigloader_mod1.js">
     </script>
